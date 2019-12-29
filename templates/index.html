@@ -9,8 +9,10 @@
     <body>
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
+                <!-- Jinja Templating used within the curly brackets to inject the view from run.py --> 
+                <!-- Corresponds to the function def-->
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
             </ul>
         </nav>
         <h1>Home Page</h1>
