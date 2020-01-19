@@ -40,8 +40,8 @@ def contact():
 def careers():
     return render_template("careers.html", page_title="Careers")
 
-if __name__ == "__main__":
-    app.run(host="127.0.0.1",
-            port="8080",
+if __name__ == '__main__':
+    app.run(host=os.environ.get('IP'),
+            port=int(os.environ.get('PORT')),
             debug=True)
 
